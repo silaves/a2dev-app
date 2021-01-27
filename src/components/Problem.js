@@ -1,8 +1,7 @@
 import React, { useEffect, useReducer, useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { getSolutionProblem } from '../helpers/getSolutionProblem';
 import { uiReducer } from '../reducers/uiReducer';
-import Loading from './messages/Loading';
+// import Loading from './messages/Loading';
 import ErrorMessage from './messages/ErrorMessage';
 const Problem = ({ data_problem }) => {
 //     axios.defaults.xsrfCookieName = 'csrftoken'

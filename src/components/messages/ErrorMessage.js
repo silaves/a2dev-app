@@ -8,7 +8,7 @@ const ErrorMessage = ({dispatch,msg}) => {
                 <h3>OOPS!</h3>
                 <img src={doge} alt='ratas' width='120' />
                 <p>{msg}</p>
-                <a
+                <a href="/#"
                     className='btn btn-primary'
                     onClick={() => dispatch({ type: 'removeError' })}
                 >
