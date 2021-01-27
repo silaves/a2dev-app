@@ -1,0 +1,160 @@
+header{
+    font-family: 'Poppins',sans-serif;
+}
+
+.navbar-mxs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding:20px;
+    height: 70px;
+    width: 100%;
+    background-color: #080b1f;
+    -moz-user-select: none; 
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                    user-select: none; 
+    // padding:20px 20px 20px 20px;
+    // line-height: 50px;
+//     background: rgb(222,53,76);
+// background: linear-gradient(90deg, rgba(222,53,76,1) 18%, rgba(147,36,50,1) 49%, rgba(60,24,116,1) 89%);
+
+    & ul.navbar-mxs-list {
+        padding:0;
+        margin: 0 !important;
+        list-style: none;
+        text-decoration: none;
+        margin: 0 auto;
+        // line-height: 400%;
+        
+        & li {
+            margin:0 30px;
+            float: left;
+            text-transform: uppercase;
+            font-weight:600;
+            // color:#DE354C;
+            font-size: 17px;
+
+            & .nav-link {
+                display: block;
+                color: #ebf5fc;
+                text-decoration: none;
+
+                border-style: solid;
+                border-width: 2px;
+                border-color: transparent;
+                padding: 0 5px 0 5px;
+                border-radius: 2px;
+                transition: 0.3s;
+            }
+        }
+
+    }
+    
+    & .navbar-logo {
+        font-size: 26px;
+        margin-left: 50px;
+        font-weight: 800;
+        // text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.navbar-mxs > .nav-btn {
+    display: none;
+  }
+@media (max-width:991px)
+{
+    .navbar-mxs > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 100;
+      }
+      .navbar-mxs > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+      }
+      .navbar-mxs > .nav-btn > label:hover,.navbar-mxs  #nav-check:checked ~ .nav-btn > label {
+        // background-color: rgba(255, 255, 255, 1);
+        cursor:pointer;
+      }
+      .navbar-mxs > .nav-btn > label > span {
+        display: block;
+        width: 40px;
+        height: 10px;
+        border-top: 3px solid #eee;
+        color:lighten($color: $light-blue, $amount: 10) !important;
+      }
+    // ul.navbar-mxs-list {
+    //     position: fixed;
+    //     background: rgba(33,33,33,.9);
+    //     z-index: 2;
+    //     top: 0;
+    //     // left: -100vw;
+    //     left:0;
+    //     width: 100vw;
+    //     bottom: 0;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     -webkit-transition: .3s;
+    //     transition: .3s;
+    //     font-size: 18px;
+    // }
+    & ul.navbar-mxs-list{display: none;}
+    & ul.navbar-mxs-list.show {
+        position: fixed;
+        // background: rgba(33,33,33,.9);
+        background-color: darken($color: $dark-blue, $amount: 10);
+        z-index: 20;
+        top: 0;
+        left:0;
+        width: 100vw;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & li {
+            list-style: none;
+
+            & .nav-link {
+                position: relative;
+                font-size: 2em;
+                color:#fff;
+                text-decoration: none;
+                margin: 10px 0;
+                display: inline-block;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+.nav-link:hover{
+    border-color: #2196f3 !important;
+    
+}
+#marker {
+    position: absolute;
+    top:0;
+    height: 50px;
+    margin-top: 0px;
+    background-color: #2196f3;
+    border-radius: 2px;
+    transition: 0.5s;
+    display: none;
+}
+
+.active-link{
+    border-color:#2196f3 !important;
+    padding: 0 5px 0 5px;
+    border-radius: 2px;
+    background-color: #2196f3;
+    color:black !important;
+}

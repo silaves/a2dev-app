@@ -1,0 +1,24 @@
+$dark:#24252a;
+$dark-blue:#080b1f;
+// $dark-blue:#12232E;
+$light-blue:#2196f3;
+// $light-blue: #006BB4;
+$dark-white:#F1F1E6;
+$green:#00e676;
+$text-black:#777;
+// $text-black2:#999;
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+@import './components/buttons.scss';
+@import './components/inputs.scss';
+@import './components/navbar.scss';
+@import './components/content.scss';
+@import './components/footer.scss';
+@import './components/alerts.scss';

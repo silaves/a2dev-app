@@ -1,0 +1,100 @@
+h2.footer-title {
+    position: relative;
+    color:#fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: $light-blue;
+    }
+}
+footer {
+    position: relative;
+    padding: 10px 100px;
+    // width: 100%;
+    height: auto;
+    background-color: #080b1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex-wrap: wrap;
+    font-family: 'Poppins',sans-serif;
+    overflow-x: hidden;
+
+    & .container-footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        font-size: 14px;
+        & .about {
+            width: 60%;
+            margin-right: 30px;
+
+            & p {
+                color: #999;
+            }
+        }
+
+        & .contact {
+            width: calc(40% - 30px);
+            margin-right: 0 !important;
+            // min-width: 200px;
+
+            & ul.contact-list {
+                position: relative;
+                padding:0;
+                margin: 0;
+
+                & li {
+                    // list-style: none;
+                    display: flex;
+                    margin-bottom: 10px;
+                    // display: inline-block;
+
+                    & span:nth-child(1) {
+                        color:#fff;
+                        font-size: 20px;
+                        margin-right: 20px;
+                    }
+                    & span {
+                        color:#999;
+                        // width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    width: 100%;
+    background-color: lighten($color: #080b1f, $amount: 5);
+    padding: 5px 0 5px 0;
+    text-align: center;
+    color: lighten($color: $text-black, $amount: 5);
+    font-weight: 300;
+    font-size: 13px;
+}
+
+@media (max-width: 991px)
+{
+    footer {
+        padding:40px;
+
+        & .container-footer {
+            flex-direction: column;
+
+            & .contact, .about {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    }
+}

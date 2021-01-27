@@ -1,0 +1,85 @@
+.modal-open{
+    height: 100vh;
+  overflow-y: hidden;
+}
+.error-on{
+    // display: block;
+    // display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left: 0;
+    & div {
+        flex-direction: column;
+        background-color: white;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px 20px 10px;
+        border: 1px solid #D3DAE6;
+        border-radius: 5px;
+        box-shadow: 0 40px 64px 0 rgba(65,78,101, 0.1),
+                0 24px 32px 0 rgba(65,78,101, 0.1),
+                0 16px 16px 0 rgba(65,78,101, 0.1),
+                0 8px 8px 0 rgba(65,78,101, 0.1),
+                0 4px 4px 0 rgba(65,78,101, 0.1),
+                0 2px 2px 0 rgba(65,78,101, 0.1);
+        border-color: #c6cad1;
+        border-top-color: #e3e4e8;
+        border-bottom-color: #aaafba;
+        
+        & p {
+            text-align: center;
+        }
+    }
+}
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    background-color: lighten($color: $green, $amount: 20) !important;
+}
+.error-off, .loading-off{
+    display: none;
+}
+.section-send > .btn > i::before {
+    position: absolute;
+    margin-left: -20px;
+    font-size: 15px;
+    top: 13px;
+    opacity: 0;
+    z-index: 10;
+    transform:rotate(180deg);
+}
+.btn-loading::before {
+    animation: fa-spin 2s infinite linear;
+    opacity: 1 !important;
+
+}
+@-webkit-keyframes fa-spin
+{
+    0%{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    100%{
+        -webkit-transform:rotate(359deg);
+        transform:rotate(359deg)
+    }
+}
+@keyframes fa-spin{
+    0%{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg)}
+    100%{
+        -webkit-transform:rotate(359deg);
+        transform:rotate(359deg)
+    }
+}
