@@ -1,4 +1,8 @@
-instalacion
+Proyecto de React realizado con
+React.js 17.0.1
+Node.js v12.18.3
+
+Instalacion
 
 1.  $ git clone https://github.com/silaves/a2dev-app.git
 
